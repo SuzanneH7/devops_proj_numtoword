@@ -23,7 +23,7 @@
    <target name="test" depends="compile">
       <junit printsummary="yes" haltonfailure="yes">
         <classpath refid="class.path"/>
-        <classpath location="bin"/>
+        <classpath location="bin/devops/testcase"/>
         <formatter type="plain"/>
         <batchtest fork="yes" todir="report">
            <fileset dir="test">
