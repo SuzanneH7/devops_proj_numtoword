@@ -15,13 +15,11 @@
       <javac srcdir="Numbers/src" destdir="bin" includeantruntime="false">
          <classpath refid="class.path"/>
       </javac>
-      <javac srcdir="test" destdir="bin" includeantruntime="false">
+      <javac srcdir="Numbers/test" destdir="bin" includeantruntime="false">
          <classpath refid="class.path"/>
       </javac>
    </target>
-   <target name="compress" depends="compile">
-        <jar destfile="dist/Numbers.jar" basedir="bin" />
-   </target>
+   
    <target name="test" depends="compile">
       <junit printsummary="yes" haltonfailure="yes">
         <classpath refid="class.path"/>
@@ -44,6 +42,9 @@
             <attribute name="Class-Path" value="${manifest.classpath}"/>
          </manifest>
       </jar>
+   </target>
+   <target name="compress" depends="compile">
+        <jar destfile="dist/Numbers.jar" basedir="bin" />
    </target>
    <target name="clean">
       <delete dir="bin"/>
