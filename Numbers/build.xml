@@ -15,7 +15,7 @@
       <javac srcdir="Numbers/src" destdir="bin" includeantruntime="false">
          <classpath refid="class.path"/>
       </javac>
-      <javac srcdir="Numbers/test" destdir="bin" includeantruntime="false">
+      <javac srcdir="Numbers/test" destdir="bin/devops/testcase" includeantruntime="false">
          <classpath refid="class.path"/>
       </javac>
    </target>
