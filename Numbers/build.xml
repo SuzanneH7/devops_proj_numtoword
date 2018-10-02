@@ -15,7 +15,7 @@
       <javac srcdir="Numbers/src" destdir="bin" includeantruntime="false">
          <classpath refid="class.path"/>
       </javac>
-      <javac srcdir="Numbers/test" destdir="bin/devops/testcase" includeantruntime="false">
+      <javac srcdir="Numbers/test" destdir="bin" includeantruntime="false">
          <classpath refid="class.path"/>
       </javac>
    </target>
@@ -23,11 +23,11 @@
    <target name="test" depends="compile">
       <junit printsummary="yes" haltonfailure="yes">
         <classpath refid="class.path"/>
-        <classpath location="bin/devops/testcase"/>
+        <classpath location="bin"/>
         <formatter type="plain"/>
         <batchtest fork="yes" todir="report">
            <fileset dir="test">
-              <include name="**/*java"/>
+              <include name="**/*.java"/>
            </fileset>
         </batchtest>
       </junit>
