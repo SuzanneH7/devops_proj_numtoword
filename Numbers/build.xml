@@ -19,6 +19,9 @@
          <classpath refid="class.path"/>
       </javac>
    </target>
+   <target name="compress" depends="compile">
+        <jar destfile="dist/Numbers.jar" basedir="bin" />
+   </target>
    <target name="test" depends="compile">
       <junit printsummary="yes" haltonfailure="yes">
         <classpath refid="class.path"/>
