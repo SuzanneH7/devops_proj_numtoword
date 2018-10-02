@@ -22,6 +22,8 @@
    
    <target name="test" depends="compile">
       <junit printsummary="yes" haltonfailure="yes" showoutput="yes">
+         <classpath location="lib/test/junit-4.12.jar" />
+         <classpath location="lib/test/hamcrest-core-1.3.jar" />
         <classpath refid="class.path"/>
         <classpath location="bin"/>
         <formatter type="plain"/>
