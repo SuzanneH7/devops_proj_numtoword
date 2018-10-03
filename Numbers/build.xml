@@ -20,7 +20,7 @@
       </javac>
    </target>
    
-   <target name="test" depends="compile">
+   <!--<target name="test" depends="compile">
       <junit printsummary="yes" haltonfailure="yes" showoutput="yes">
          <classpath location="lib/test/junit-4.12.jar" />
          <classpath location="lib/test/hamcrest-core-1.3.jar" />
@@ -33,8 +33,8 @@
            </fileset>
         </batchtest>
       </junit>
-   </target>
-   <target name="dist" depends="test">
+   </target>-->
+   <target name="dist" depends="compile">
       <manifestclasspath property="manifest.classpath" jarfile="${jar.file}">
          <classpath refid="class.path"/>
       </manifestclasspath>
@@ -45,9 +45,9 @@
          </manifest>
       </jar>
    </target>
-   <target name="compress" depends="compile">
+   <!--<target name="compress" depends="compile">
         <jar destfile="dist/Numbers.jar" basedir="bin" />
-   </target>
+   </target>-->
    <target name="clean">
       <delete dir="bin"/>
       <delete dir="report"/>
