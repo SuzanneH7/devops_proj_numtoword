@@ -28,7 +28,7 @@
         <classpath location="bin"/>
         <formatter type="plain"/>
         <batchtest fork="yes" todir="report">
-           <fileset dir="Numbers/test">
+           <fileset dir="test">
               <include name="**/*.java"/>
            </fileset>
         </batchtest>
